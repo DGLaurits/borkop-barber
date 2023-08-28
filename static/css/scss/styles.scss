@@ -1,0 +1,142 @@
+@keyframes welcome-slide {
+    from {
+        right: 100vw;
+    }
+    to {
+        right: 0px;
+    }
+}
+
+@keyframes welcome-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    overflow-y: scroll;
+}
+
+.masthead-home {
+    background: url("../images/masthead-image.jpg") rgba($color: #5C4D42, $alpha: .8);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1 {
+        :first-child {
+            position: relative;
+            animation: welcome-slide 1s ease 0s both;
+        }
+        :nth-child(3) {
+            position: relative;
+            animation: welcome-slide 1s ease .5s both;
+        }
+    }
+    
+    :not(:nth-child(1)) {
+        animation: welcome-fade 1s ease 1s both;
+    }
+
+}
+
+.masthead {
+    background: url("../images/masthead-secondary.jpg") rgba($color: #463a32, $alpha: .8);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    * {
+        color: white;
+    }
+}
+
+.navbar {
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    .nav-link {
+        color: rgba($color: #fff, $alpha: .8);
+        &:hover {
+            color: rgba($color: #fff, $alpha: 1);
+        }
+    }
+    .navbar-brand {
+        font-weight: bold;
+        color: rgba($color: #fff, $alpha: .95);
+        > svg {
+            fill: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar{
+        .nav-link {
+            color: rgba($color: black, $alpha: .7);
+            &:hover {
+                color: rgba($color: black, $alpha: 1);
+            }
+        }
+        .navbar-brand {
+            color: rgba($color: black, $alpha: .95);
+            > svg {
+                fill: rgba($color: black, $alpha: .95);
+            }
+        }
+        background-color: white;
+    }
+}
+
+.navbar-shrink {
+    .nav-link {
+        color: rgba($color: black, $alpha: .7);
+        &:hover {
+            color: rgba($color: black, $alpha: 1);
+        }
+    }
+    .navbar-brand {
+        color: rgba($color: black, $alpha: .95);
+        > svg {
+            fill: rgba($color: black, $alpha: .95);
+        }
+    }
+
+    background-color: white;
+}
+
+.book-btn {
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    border: 4px white solid;
+    border-radius: 2rem;
+    &:hover {
+        border: 4px rgb(230, 230, 230) solid;
+    }
+}
+
+.top-section {
+    margin-top: 100px;
+}
+
+.price-table {
+    text-align: left;
+    > tbody > tr > td:first-child {
+        padding: 4px 48px 4px 8px;
+        border-top: 2px rgba($color: #fff, $alpha: .2) solid;
+    }
+    > tbody > tr > td:last-child {
+        padding: 4px 8px;
+        border-top: 2px rgba($color: #fff, $alpha: .2) solid;
+    }
+}
+
+.info-container {
+    background-color: rgba($color: #000000, $alpha: .2);
+    border: 2px rgba($color: #fff, $alpha: .2) solid;
+    border-radius: 2px;
+}

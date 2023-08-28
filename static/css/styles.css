@@ -1,0 +1,134 @@
+@keyframes welcome-slide {
+  from {
+    right: 100vw;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes welcome-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+body {
+  font-family: "Playfair Display", serif;
+  overflow-y: scroll;
+}
+
+.masthead-home {
+  background: url("../images/masthead-image.jpg") rgba(92, 77, 66, 0.8);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.masthead-home h1 :first-child {
+  position: relative;
+  animation: welcome-slide 1s ease 0s both;
+}
+.masthead-home h1 :nth-child(3) {
+  position: relative;
+  animation: welcome-slide 1s ease 0.5s both;
+}
+.masthead-home :not(:nth-child(1)) {
+  animation: welcome-fade 1s ease 1s both;
+}
+
+.masthead {
+  background: url("../images/masthead-secondary.jpg") rgba(70, 58, 50, 0.8);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.masthead * {
+  color: white;
+}
+
+.navbar {
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+.navbar .nav-link:hover {
+  color: white;
+}
+.navbar .navbar-brand {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.95);
+}
+.navbar .navbar-brand > svg {
+  fill: white;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar {
+    background-color: white;
+  }
+  .navbar .nav-link {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .navbar .nav-link:hover {
+    color: black;
+  }
+  .navbar .navbar-brand {
+    color: rgba(0, 0, 0, 0.95);
+  }
+  .navbar .navbar-brand > svg {
+    fill: rgba(0, 0, 0, 0.95);
+  }
+}
+.navbar-shrink {
+  background-color: white;
+}
+.navbar-shrink .nav-link {
+  color: rgba(0, 0, 0, 0.7);
+}
+.navbar-shrink .nav-link:hover {
+  color: black;
+}
+.navbar-shrink .navbar-brand {
+  color: rgba(0, 0, 0, 0.95);
+}
+.navbar-shrink .navbar-brand > svg {
+  fill: rgba(0, 0, 0, 0.95);
+}
+
+.book-btn {
+  margin-top: 2rem;
+  padding: 1rem 1rem;
+  font-size: 2rem;
+  border: 4px white solid;
+  border-radius: 2rem;
+}
+.book-btn:hover {
+  border: 4px rgb(230, 230, 230) solid;
+}
+
+.top-section {
+  margin-top: 100px;
+}
+
+.price-table {
+  text-align: left;
+}
+.price-table > tbody > tr > td:first-child {
+  padding: 4px 48px 4px 8px;
+  border-top: 2px rgba(255, 255, 255, 0.2) solid;
+}
+.price-table > tbody > tr > td:last-child {
+  padding: 4px 8px;
+  border-top: 2px rgba(255, 255, 255, 0.2) solid;
+}
+
+.info-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  border-radius: 2px;
+}/*# sourceMappingURL=styles.css.map */
